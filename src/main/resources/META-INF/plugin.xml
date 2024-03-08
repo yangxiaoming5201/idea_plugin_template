@@ -1,0 +1,80 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.mingsun.it.mybatis</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Mybatis</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+  ]]></description>
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.java</depends>
+    <depends>com.intellij.spring</depends>
+    <!--
+  定义扩展点，其它插件可以通过这个扩展点来提供某些数据
+  https://www.ideaplugin.com/idea-docs/Part%20I%20%E6%8F%92%E4%BB%B6/PluginStructure/Extension%20Points.html
+  -->
+    <!--    <extensionPoints>-->
+    <!--        <extensionPoint-->
+    <!--                name="testExtensionPoint"-->
+    <!--                beanClass="com.example.impl.MyExtensionBean"/>-->
+
+    <!--    </extensionPoints>-->
+
+    <!--
+    Application-level 应用级的监听器.
+    https://www.ideaplugin.com/idea-docs/Part%20I%20插件/PluginStructure/Listeners.html#注册应用级-application-level-监听器
+    -->
+    <!--    <applicationListeners>-->
+    <!--        <listener-->
+    <!--                class="com.example.impl.MyListener"-->
+    <!--                topic="com.intellij.openapi.vfs.newvfs.BulkFileListener"/>-->
+    <!--    </applicationListeners>-->
+
+    <!--
+   Project-level 项目级的监听器.
+    https://www.ideaplugin.com/idea-docs/Part%20I%20插件/PluginStructure/Listeners.html#注册项目级-project-level-监听器
+    -->
+    <!--    <projectListeners>-->
+    <!--        <listener-->
+    <!--                class="com.example.impl.MyToolwindowListener"-->
+    <!--                topic="com.intellij.openapi.wm.ex.ToolWindowManagerListener"/>-->
+    <!--    </projectListeners>-->
+
+    <!--
+ Actions 操作. 了解更多，请看:
+ https://www.ideaplugin.com/idea-docs/Part%20II%20%E2%80%94%20Base%20Platform/Actions/
+ -->
+    <actions>
+        <action id="myaction1" class="com.mingsun.it.MyAction1" text="MyAction1" description="MyAction1">
+            <add-to-group group-id="HelpMenu" anchor="first" relative-to-action="About"/>
+        </action>
+    </actions>
+
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <!--    <extensions defaultExtensionNs="com.intellij">-->
+    <!--        <applicationService-->
+    <!--                serviceImplementation="com.example.impl.MyApplicationService"/>-->
+    <!--        <projectService-->
+    <!--                serviceImplementation="com.example.impl.MyProjectService"/>-->
+
+    <!--    </extensions>-->
+    <!--  自定义扩展   https://www.ideaplugin.com/idea-docs/Part%20I%20%E6%8F%92%E4%BB%B6/PluginStructure/Extensions.html  -->
+    <!--    <extensions defaultExtensionNs="VssIntegration">-->
+    <!--        <myExtensionPoint implementation="com.example.impl.MyExtensionImpl"/>-->
+    <!--    </extensions>-->
+
+</idea-plugin>

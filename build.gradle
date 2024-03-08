@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.17.0'
+    //gradle-intellij-plugin 插件  https://github.com/JetBrains/gradle-intellij-plugin/blob/master/README.md
+}
+
+group = 'com.mingsun.it'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    //指定去maven的私服或者第三方镜像仓库查找
+    maven { name "Alibaba"; url "https://maven.aliyun.com/repository/public" }
+    maven { name "Bstek"; url "https://nexus.bsdn.org/content/groups/public/" }
+    mavenCentral()
+}
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = '2023.1'
+    type = "IU"//编辑此插件的 idea版本
+    plugins = ["maven", "com.intellij.java", "Spring"]
+}
+
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
