@@ -4,7 +4,7 @@ plugins {
     //gradle-intellij-plugin ²å¼þ  https://github.com/JetBrains/gradle-intellij-plugin/blob/master/README.md
 }
 
-group = 'com.mingsun.it'
+group = 'com.ming.sun.it'
 version = '1.0-SNAPSHOT'
 
 repositories {

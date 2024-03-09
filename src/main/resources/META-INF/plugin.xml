@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.mingsun.it.mybatis</id>
+    <id>com.ming.sun.it.mybatis</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
@@ -57,24 +57,28 @@
  https://www.ideaplugin.com/idea-docs/Part%20II%20%E2%80%94%20Base%20Platform/Actions/
  -->
     <actions>
-        <action id="myaction1" class="com.mingsun.it.MyAction1" text="MyAction1" description="MyAction1">
-            <add-to-group group-id="HelpMenu" anchor="first" relative-to-action="About"/>
+        <action id="MyAction" class="com.ming.sun.it.MyAction" text="MyAction" description="MyAction">
+            <add-to-group group-id="HelpMenu" anchor="before" relative-to-action="About"/>
         </action>
     </actions>
 
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <!--    <extensions defaultExtensionNs="com.intellij">-->
-    <!--        <applicationService-->
-    <!--                serviceImplementation="com.example.impl.MyApplicationService"/>-->
-    <!--        <projectService-->
-    <!--                serviceImplementation="com.example.impl.MyProjectService"/>-->
+    <extensions defaultExtensionNs="com.intellij">
+        <!--            <applicationService-->
+        <!--                    serviceImplementation="com.example.impl.MyApplicationService"/>-->
+        <!--            <projectService-->
+        <!--                    serviceImplementation="com.example.impl.MyProjectService"/>-->
+        <toolWindow id="Sample Calendar" secondary="true"
+                    icon="AllIcons.General.Modified" anchor="right"
+                    factoryClass="com.ming.sun.it.MyToolWindowFactory"/>
 
-    <!--    </extensions>-->
+    </extensions>
     <!--  自定义扩展   https://www.ideaplugin.com/idea-docs/Part%20I%20%E6%8F%92%E4%BB%B6/PluginStructure/Extensions.html  -->
-    <!--    <extensions defaultExtensionNs="VssIntegration">-->
-    <!--        <myExtensionPoint implementation="com.example.impl.MyExtensionImpl"/>-->
-    <!--    </extensions>-->
+    <extensions defaultExtensionNs="VssIntegration">
+        <!--            <myExtensionPoint implementation="com.example.impl.MyExtensionImpl"/>-->
+
+    </extensions>
 
 </idea-plugin>
